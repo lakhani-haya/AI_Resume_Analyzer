@@ -16,8 +16,31 @@ st.set_page_config(page_title="ai resume analyzer", layout="wide")
 col1, col2 = st.columns([1, 2], gap="large")
 
 with col1:
-    st.markdown("<h1 style='font-size:2.5rem; margin-bottom:0.5rem;'>ai resume analyzer</h1>", unsafe_allow_html=True)
     st.markdown("""
+        <style>
+        .slide-in-title {
+            opacity: 0;
+            transform: translateX(-40px);
+            animation: slideInTitle 1s forwards;
+        }
+        .slide-in-desc {
+            opacity: 0;
+            transform: translateX(-40px);
+            animation: slideInDesc 1s 0.7s forwards;
+        }
+        @keyframes slideInTitle {
+            to { opacity: 1; transform: none; }
+        }
+        @keyframes slideInDesc {
+            to { opacity: 1; transform: none; }
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+        <h1 class='slide-in-title' style='font-size:2.5rem; margin-bottom:0.5rem;'>ai resume analyzer</h1>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+        <div class='slide-in-desc'>
         <p style='font-size:1.2rem;'>
         paste your resume text on the right and get instant feedback on clarity, conciseness, and relevance.<br><br>
         this tool uses ai to analyze the tone and structure of your resume. it helps you:
@@ -26,9 +49,8 @@ with col1:
             <li>make your writing more concise and impactful</li>
             <li>ensure your experience is relevant to your target roles</li>
         </ul>
-        results are instant and private. no data is stored.<br><br>
-        try pasting a few different resumes to see how the feedback changes.
         </p>
+        </div>
     """, unsafe_allow_html=True)
 
 with col2:
