@@ -5,8 +5,8 @@ body, .stApp {
     text-transform: lowercase !important;
 }
 .stTextArea textarea, .stTextInput input {
-    background: #000 !important;
-    color: #fff !important;
+    background: #f7f7f7 !important; /* very light grey */
+    color: #111 !important;
     font-family: 'Fira Mono', 'Cascadia Mono', 'JetBrains Mono', 'Caveat', 'Comic Sans MS', 'Courier New', monospace, cursive !important;
     text-transform: lowercase !important;
     border-radius: 8px;
