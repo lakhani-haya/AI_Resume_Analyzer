@@ -1,63 +1,72 @@
-# AI Resume Analyzer
+# AI Resume Analyzer using Hugging Face Transformers
 
-AI Resume Analyzer
-description: >
-  A lightweight NLP-powered app that analyzes resume text and provides actionable feedback on clarity, conciseness, and relevance. 
-  Built with Streamlit and Hugging Face Transformers.
+This project uses Python and Hugging Face’s `transformers` library to analyze resume text and provide automated feedback. It demonstrates how natural language processing (NLP) can be used to support job-seekers by improving resume clarity, conciseness, and relevance — all within a minimal web-based interface.
 
-tags:
-  - NLP
-  - Streamlit
-  - Hugging Face
-  - Resume Analysis
-  - Transformers
-  - Python
+---
 
-tech_stack:
-  - category: Programming Language
-    tools: [Python]
-  - category: Libraries
-    tools: [Streamlit, Transformers, Torch]
-  - category: NLP Model
-    tools: [distilbert-base-uncased-finetuned-sst-2-english]
-  - category: IDE
-    tools: [VS Code]
-  - category: Runtime
-    tools: [Localhost via Streamlit]
-  - category: Optional Deployment
-    tools: [Streamlit Community Cloud]
+## Project Objectives
 
-features:
-  - Paste your resume into a simple browser interface
-  - Get AI-generated feedback on clarity, conciseness, and relevance
-  - Runs locally with no paid API required
-  - Easy to modify or extend to compare job descriptions
+- Analyze resumes using pretrained NLP models
+- Provide category-specific feedback: Clarity, Conciseness, Relevance
+- Build a lightweight, real-time resume analysis app using Streamlit
+- Run entirely on local machine with no paid API dependencies
 
-install:
-  - pip install -r requirements.txt
-  - streamlit run app.py
+---
 
-requirements:
-  - streamlit
-  - transformers
-  - torch
+## Tools & Technologies Used
 
-how_it_works: >
-  The app uses Hugging Face's sentiment-analysis pipeline to classify the tone of different parts of the resume.
-  The beginning, ending, and full text are each evaluated separately to provide category-specific feedback.
+| Tool | Purpose |
+|------|---------|
+| **Python (Streamlit, Transformers, Torch)** | Application logic and NLP inference |
+| **Hugging Face Transformers** | Sentiment classification model (`distilbert-base-uncased-finetuned-sst-2-english`) |
+| **Streamlit** | Web app framework for interactive UI |
+| **VS Code** | Development environment |
+| **GitHub** | Project versioning and sharing |
 
-future_improvements:
-  - PDF upload and parsing
-  - Job description matching
-  - Visual scoring or comparison dashboards
-  - Deployment to Streamlit Cloud or other platforms
+---
 
-author:
-  name: Your Name
-  links:
-    - label: LinkedIn
-      url: https://linkedin.com/in/your-profile
-    - label: Portfolio
-      url: https://yourportfolio.com
+## Resume Analysis Approach
 
-license: MIT
+1. Collected resume text via a browser-based text input
+2. Split text into sections (opening, ending, full body)
+3. Passed each section through a sentiment classification model using Hugging Face’s `pipeline`
+4. Generated human-readable feedback for each category
+5. Rendered output immediately in the browser using Streamlit
+
+---
+
+## What I Learned
+
+- How to integrate Hugging Face models into real-time applications
+- How to build and test NLP tools locally with no external API access
+- How to structure resume text analysis using basic sentiment classification
+- How to quickly prototype useful interfaces using Streamlit
+
+---
+
+## Sample Application UI
+
+The Streamlit app takes pasted resume text and produces three pieces of feedback based on different segments of the document. All model inference runs locally using Hugging Face’s default sentiment pipeline.
+
+The app includes:
+- Resume input box
+- One-click analysis trigger
+- Model-generated feedback for:
+  - Clarity (based on the intro)
+  - Conciseness (based on the ending)
+  - Relevance (based on full content)
+
+### Key Takeaways:
+- Using even basic sentiment models, you can extract valuable cues about tone and writing quality
+- Streamlit allows rapid iteration and zero-setup sharing
+- The structure allows easy extension to compare resumes to job descriptions or score against industry benchmarks
+
+---
+
+## Connect with Me
+
+If you’d like to collaborate or view more projects, check out:
+- [My Portfolio](https://lakhani-haya.github.io)
+- [GitHub Profile](https://github.com/lakhani-haya)
+- [Email](mailto:hy.lakhanii@gmail.com)
+
