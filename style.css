@@ -1,0 +1,29 @@
+body, .stApp {
+    background: #fff !important;
+    color: #111 !important;
+    font-family: 'Fira Mono', 'Cascadia Mono', 'JetBrains Mono', 'Caveat', 'Comic Sans MS', 'Courier New', monospace, cursive !important;
+    text-transform: lowercase !important;
+}
+.stTextArea textarea, .stTextInput input {
+    background: #000 !important;
+    color: #fff !important;
+    font-family: 'Fira Mono', 'Cascadia Mono', 'JetBrains Mono', 'Caveat', 'Comic Sans MS', 'Courier New', monospace, cursive !important;
+    text-transform: lowercase !important;
+    border-radius: 8px;
+    border: 1px solid #111;
+    font-size: 1.1rem;
+}
+.stButton button {
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid #111 !important;
+    border-radius: 8px;
+    font-family: 'Fira Mono', 'Cascadia Mono', 'JetBrains Mono', 'Caveat', 'Comic Sans MS', 'Courier New', monospace, cursive !important;
+    text-transform: lowercase !important;
+}
+.stAlert, .stMarkdown, .stSubheader, .stSuccess {
+    color: #111 !important;
+    background: #fff !important;
+    font-family: 'Fira Mono', 'Cascadia Mono', 'JetBrains Mono', 'Caveat', 'Comic Sans MS', 'Courier New', monospace, cursive !important;
+    text-transform: lowercase !important;
+}
